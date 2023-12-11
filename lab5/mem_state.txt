@@ -1,0 +1,60 @@
+KiB Mem :  2014884 total,   922276 free,   951272 used,   141336 
+KiB Swap:  1459804 total,   668392 free,   791412 used.   917272 
+KiB Mem :  2014884 total,   785768 free,  1087220 used,   141896 
+KiB Swap:  1459804 total,   668392 free,   791412 used.   781076 
+KiB Mem :  2014884 total,   654948 free,  1218032 used,   141904 
+KiB Swap:  1459804 total,   668392 free,   791412 used.   650280 
+KiB Mem :  2014884 total,   534280 free,  1338692 used,   141912 
+KiB Swap:  1459804 total,   668392 free,   791412 used.   529616 
+KiB Mem :  2014884 total,   410032 free,  1462940 used,   141912 
+KiB Swap:  1459804 total,   668392 free,   791412 used.   405368 
+KiB Mem :  2014884 total,   279692 free,  1593280 used,   141912 
+KiB Swap:  1459804 total,   668648 free,   791156 used.   275028 
+KiB Mem :  2014884 total,   161612 free,  1711352 used,   141920 
+KiB Swap:  1459804 total,   668648 free,   791156 used.   156952 
+KiB Mem :  2014884 total,    70864 free,  1825388 used,   118632 
+KiB Swap:  1459804 total,   682984 free,   776820 used.    54524 
+KiB Mem :  2014884 total,    80912 free,  1884228 used,    49744 
+KiB Swap:  1459804 total,   629224 free,   830580 used.    30700 
+KiB Mem :  2014884 total,    66744 free,  1893576 used,    54564 
+KiB Swap:  1459804 total,   543464 free,   916340 used.    18896 
+KiB Mem :  2014884 total,    71516 free,  1896824 used,    46544 
+KiB Swap:  1459804 total,   446760 free,  1013044 used.    19676 
+KiB Mem :  2014884 total,    74788 free,  1894860 used,    45236 
+KiB Swap:  1459804 total,   341604 free,  1118200 used.    22256 
+KiB Mem :  2014884 total,    75596 free,  1894608 used,    44680 
+KiB Swap:  1459804 total,   237508 free,  1222296 used.    22764 
+KiB Mem :  2014884 total,    73116 free,  1897492 used,    44276 
+KiB Swap:  1459804 total,   132328 free,  1327476 used.    20144 
+KiB Mem :  2014884 total,    67196 free,  1895256 used,    52432 
+KiB Swap:  1459804 total,    30504 free,  1429300 used.    18280 
+KiB Mem :  2014884 total,   617172 free,  1324260 used,    73452 
+KiB Swap:  1459804 total,   296160 free,  1163644 used.   578812 
+KiB Mem :  2014884 total,   465140 free,  1450808 used,    98936 
+KiB Swap:  1459804 total,   323952 free,  1135852 used.   439488 
+KiB Mem :  2014884 total,   398164 free,  1517148 used,    99572 
+KiB Swap:  1459804 total,   323952 free,  1135852 used.   372836 
+KiB Mem :  2014884 total,   331592 free,  1583280 used,   100012 
+KiB Swap:  1459804 total,   323952 free,  1135852 used.   306484 
+KiB Mem :  2014884 total,   268104 free,  1646396 used,   100384 
+KiB Swap:  1459804 total,   323952 free,  1135852 used.   243180 
+KiB Mem :  2014884 total,   179476 free,  1726748 used,   108660 
+KiB Swap:  1459804 total,   335216 free,  1124588 used.   158672 
+KiB Mem :  2014884 total,   100272 free,  1803108 used,   111504 
+KiB Swap:  1459804 total,   349808 free,  1109996 used.    80908 
+KiB Mem :  2014884 total,    66260 free,  1842916 used,   105708 
+KiB Swap:  1459804 total,   323556 free,  1136248 used.    43940 
+KiB Mem :  2014884 total,    81436 free,  1869304 used,    64144 
+KiB Swap:  1459804 total,   278380 free,  1181424 used.    38392 
+KiB Mem :  2014884 total,    73988 free,  1882808 used,    58088 
+KiB Swap:  1459804 total,   227580 free,  1232224 used.    27924 
+KiB Mem :  2014884 total,    73260 free,  1888560 used,    53064 
+KiB Swap:  1459804 total,   191004 free,  1268800 used.    24664 
+KiB Mem :  2014884 total,    72876 free,  1893880 used,    48128 
+KiB Swap:  1459804 total,   140060 free,  1319744 used.    21816 
+KiB Mem :  2014884 total,    75240 free,  1893392 used,    46252 
+KiB Swap:  1459804 total,    85048 free,  1374756 used.    23252 
+KiB Mem :  2014884 total,    69324 free,  1899240 used,    46320 
+KiB Swap:  1459804 total,    31904 free,  1427900 used.    17412 
+KiB Mem :  2014884 total,    53416 free,  1920040 used,    41428 
+KiB Swap:  1459804 total,        0 free,  1459804 used.    17730 
