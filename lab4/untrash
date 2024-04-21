@@ -1,0 +1,55 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+	echo "Incorrect arguments number, expected 1"
+	exit 1
+fi
+
+
+trash_dir="$HOME/.trash"
+trash_log_file="$trash_dir/trash.log"
+
+if [ ! -f $trash_log_file ]; then
+	echo "trash.log does not exist"
+	exit 1
+fi
+
+file_name="$1"
+
+
+grep "$file_name" "$trash_log_file" | while IFS= read -r line; 
+do
+	path=$(echo $line | awk '{print $1}')
+	trash_file=$(echo $line | awk '{print $2}')
+	echo "$path"
+	while true; do
+		echo "retrash this file? (y/n)"
+		read ans < /dev/tty
+		case "$ans" in
+			[Yy]* )
+			dir_name=$(dirname "$path")
+	                if [ ! -d "$dir_name" ]; then
+	                        echo "can not create file in $dir_name: it does not exist"
+	                        dir_name="$HOME"
+	                fi
+	                if [ -f "$dir_name/$1" ]; then
+	                        echo "file with such name already exists"
+	                        read -p "consider new name" name
+	                        file_name="$name"
+	                fi
+	                ln "$trash_dir/$trash_file" "$dir_name/$file_name"
+	                rm "$trash_dir/$trash_file"
+			echo "$line"
+	                sed -i "/$(echo "$line" | sed 's/[&/\]/\\&/g')/d" "$trash_log_file"
+	                echo "File was restored successfully"
+			break 
+			;;
+			[Nn]* )
+			break
+			;;
+			* ) echo "enter y or n"
+			;;
+		esac
+	done
+done
+

@@ -1,0 +1,65 @@
+66
+  1899 /lib/systemd/systemd --user
+  1900 (sd-pam)
+  1916 /usr/bin/gnome-keyring-daemon --daemonize --login
+  1925 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+  1927 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+  1932 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+  1936 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+  2030 /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+  2032 /usr/lib/at-spi2-core/at-spi-bus-launcher
+  2037 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+  2040 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+  2053 /usr/lib/gvfs/gvfsd
+  2058 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+  2073 /usr/bin/gnome-shell
+  2082 /usr/bin/pulseaudio --start --log-target=syslog
+  2099 ibus-daemon --xim --panel disable
+  2103 /usr/lib/gnome-shell/gnome-shell-calendar-server
+  2107 /usr/lib/ibus/ibus-dconf
+  2109 /usr/lib/ibus/ibus-x11 --kill-daemon
+  2112 /usr/lib/ibus/ibus-portal
+  2123 /usr/lib/evolution/evolution-source-registry
+  2133 /usr/lib/gnome-online-accounts/goa-daemon
+  2140 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+  2151 /usr/lib/gvfs/gvfs-afc-volume-monitor
+  2152 /usr/lib/gnome-online-accounts/goa-identity-service
+  2157 /usr/lib/gvfs/gvfs-goa-volume-monitor
+  2164 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+  2168 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+  2172 /usr/lib/gnome-settings-daemon/gsd-power
+  2173 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+  2175 /usr/lib/gnome-settings-daemon/gsd-rfkill
+  2176 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+  2177 /usr/lib/gnome-settings-daemon/gsd-sharing
+  2178 /usr/lib/gnome-settings-daemon/gsd-smartcard
+  2180 /usr/lib/gnome-settings-daemon/gsd-sound
+  2187 /usr/lib/gnome-settings-daemon/gsd-xsettings
+  2195 /usr/lib/gnome-settings-daemon/gsd-wacom
+  2207 /usr/lib/gnome-settings-daemon/gsd-clipboard
+  2210 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+  2212 /usr/lib/gnome-settings-daemon/gsd-datetime
+  2214 /usr/lib/gnome-settings-daemon/gsd-color
+  2216 /usr/lib/gnome-settings-daemon/gsd-keyboard
+  2217 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+  2218 /usr/lib/gnome-settings-daemon/gsd-mouse
+  2222 /usr/lib/gnome-settings-daemon/gsd-media-keys
+  2244 /usr/lib/gnome-settings-daemon/gsd-printer
+  2268 /usr/bin/gnome-software --gapplication-service
+  2275 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+  2283 nautilus-desktop
+  2284 /usr/bin/vmtoolsd -n vmusr --blockFd 3
+  2285 /usr/lib/gnome-initial-setup/gnome-initial-setup --existing-user
+  2299 /usr/lib/gvfs/gvfsd-trash --spawner :1.21 /org/gtk/gvfs/exec_spaw/0
+  2326 /usr/lib/evolution/evolution-calendar-factory
+  2330 /usr/lib/dconf/dconf-service
+  2347 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx2326x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/2326/2
+  2351 /usr/lib/ibus/ibus-engine-simple
+  2366 /usr/lib/evolution/evolution-addressbook-factory
+  2379 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx2366x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/2366/2
+  2433 /usr/lib/gnome-terminal/gnome-terminal-server
+  2445 bash
+  2583 update-notifier
+  2618 /usr/lib/gvfs/gvfsd-metadata
+  2625 bash i.sh
+  2628 ps -u dmesg -o pid,cmd --no-headers

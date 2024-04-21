@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+	echo "Incorrect arguments number, expected 1"
+	exit 1
+fi
+
+
+trash_dir="$HOME/.trash"
+
+if [ ! -d $trash_dir ]; then
+	mkdir $trash_dir
+fi
+
+if [ ! -e $1 ]; then
+	echo "File does not exist"
+	exit 1
+fi
+
+link_file_name=$(date +%s%N)
+
+ln $1 "$trash_dir/$link_file_name"
+
+rm $1
+echo "$PWD/$1 $link_file_name" >>  "$trash_dir/trash.log"
+

@@ -1,0 +1,31 @@
+#!/bin/bash
+
+
+source_dir="$HOME/source"
+backup_dir="$HOME/Backup-$(date +%Y-%m-%d)"
+backup_report="$HOME/backup-report"
+
+latest_backup=$(find $HOME -maxdepth 1 -type d -name "Backup-*" -mtime -7 -print | sort -r | head -n 1)
+
+
+if [[ -z $latest_backup ]]; then
+    mkdir $backup_dir
+    cp -r $source_dir/* $backup_dir
+    echo "New backup directory created: $backup_dir on $(date)" >> $backup_report
+    ls $source_dir >> $backup_report
+else
+    for src_file in $source_dir/*; do
+        filename=$(basename "$src_file")
+        dest_file="$latest_backup/$filename"
+
+        if [[ ! -f $dest_file ]]; then
+            cp $src_file $latest_backup
+            echo "Added $filename" >> $backup_report
+        #elif [[ $(stat -c%s "$src_file") -ne $(stat -c%s "$dest_file") ]]; then
+        elif ! cmp -s "$src_file" "$dest_file" ; then 
+	    mv $dest_file "${dest_file}.$(date +%Y-%m-%d)"
+            cp $src_file $latest_backup
+            echo "Updated $filename as ${filename}.$(date +%Y-%m-%d)" >> $backup_report
+        fi
+    done
+fi
